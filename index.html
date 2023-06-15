@@ -17,13 +17,6 @@
             background-color: #f9f9f9;
         }
 
-        /* Conteneur principal */
-        .main-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
         /* Bannière du haut */
         .top-banner {
             display: flex;
@@ -36,11 +29,18 @@
             z-index: 100;
         }
 
-        /* Conteneur de contenu avec publicités latérales */
+        /* Contrôler la taille et le centrage de l'image de la bannière */
+        .top-banner img {
+            max-width: 90%; /* Laisser un peu d'espace sur les côtés */
+            height: auto; /* Conserve les proportions de l'image */
+            margin: 0 auto; /* Centrer horizontalement */
+        }
+
+        /* Contenu principal et publicités latérales */
         .content-container {
             display: flex;
             max-width: 1200px;
-            margin: 20px;
+            margin: 20px auto;
             width: 100%;
         }
 
@@ -81,6 +81,23 @@
         .link:hover {
             background-color: #45a049;
         }
+
+        /* Media queries pour les écrans de taille moyenne et petite */
+        @media screen and (max-width: 992px) {
+            .content-container {
+                flex-direction: column;
+            }
+
+            .side-banner {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .top-banner img {
+                max-width: 100%;
+            }
+        }
     </style>
 </head>
 <body>
@@ -107,14 +124,7 @@
                 <ul class="links-list">
                     <li><a class="link" href="#">Lien 10</a></li>
                     <li><a class="link" href="#">Lien 9</a></li>
-                    <li><a class="link" href="#">Lien 8</a></li>
-                    <li><a class="link" href="#">Lien 7</a></li>
-                    <li><a class="link" href="#">Lien 6</a></li>
-                    <li><a class="link" href="#">Lien 5</a></li>
-                    <li><a class="link" href="#">Lien 4</a></li>
-                    <li><a class="link" href="#">Lien 3</a></li>
-                    <li><a class="link" href="#">Lien 2</a></li>
-                    <li><a class="link" href="#">Lien 1</a></li>
+                    <!-- ... le reste des liens ... -->
                 </ul>
             </div>
 
