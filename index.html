@@ -10,49 +10,27 @@
             margin: 0;
             padding: 0;
             font-family: Arial, sans-serif;
-        }
-
-        /* Couleur de fond de la page */
-        body {
             background-color: #f9f9f9;
         }
-
+        
         /* Bannière du haut */
         .top-banner {
             display: flex;
             justify-content: center;
             background-color: #f2f2f2;
-            padding: 20px;
+            padding: 10px;
             max-height: 30vh;
-            position: sticky;
-            top: 0;
-            z-index: 100;
         }
-
-        /* Contrôler la taille et le centrage de l'image de la bannière */
-        .top-banner img {
-            width: 100%;
-            height: auto;
-            max-height: 100%;
-            margin: 0 auto; /* Centrer horizontalement */
-        }
-
-        /* Contenu principal et publicités latérales */
+        
+        /* Conteneur du contenu principal et des publicités */
         .content-container {
             display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
-
-        /* Bannières latérales */
-        .side-banner img {
-            width: 100%;
-            height: auto;
-            max-height: 30vh;
+            flex-wrap: wrap;
         }
 
         /* Contenu principal */
         .main-content {
+            flex: 1;
             padding: 20px;
         }
 
@@ -67,56 +45,86 @@
             display: block;
             margin-bottom: 10px;
             padding: 10px;
-            border-radius: 5px;
             background-color: #4caf50;
             color: white;
             text-decoration: none;
             text-align: center;
-            transition: background-color 0.3s;
         }
 
-        /* Effet au survol des liens */
-        .link:hover {
-            background-color: #45a049;
+        /* Bannières latérales */
+        .side-banner {
+            padding: 10px;
         }
+
+        .side-banner img {
+            max-width: 100%;
+            max-height: 30vh;
+        }
+
+        /* Publicités intégrées */
+        .inline-ad {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        /* Publicité du bas */
+        .bottom-banner {
+            text-align: center;
+            padding: 10px;
+            max-height: 30vh;
+        }
+
     </style>
 </head>
 <body>
-    <div class="main-container">
+    <!-- Bannière du haut -->
+    <div class="top-banner">
+        <img src="votre-banniere-haut.jpg" alt="Bannière du haut">
+    </div>
 
-        <!-- Bannière publicitaire du haut -->
-        <div class="top-banner">
-            <img src="votre-banniere-haut.jpg" alt="Bannière publicitaire du haut">
+    <!-- Conteneur du contenu principal et des publicités -->
+    <div class="content-container">
+
+        <!-- Bannière latérale gauche -->
+        <div class="side-banner">
+            <img src="votre-banniere-gauche.jpg" alt="Bannière gauche">
         </div>
 
-        <!-- Contenu principal et publicités latérales -->
-        <div class="content-container">
+        <!-- Contenu principal -->
+        <div class="main-content">
+            <h1>Liste de liens</h1>
 
-            <!-- Section de contenu principal -->
-            <div class="main-content">
-                <h1>Liste de liens</h1>
-
-                <!-- Liste de liens en ordre décroissant -->
-                <ul class="links-list">
-                    <li><a class="link" href="#">Lien 10</a></li>
-                    <li><a class="link" href="#">Lien 9</a></li>
-                    <li><a class="link" href="#">Lien 8</a></li>
-                    <li><a class="link" href="#">Lien 7</a></li>
-                    <li><a class="link" href="#">Lien 6</a></li>
-                    <li><a class="link" href="#">Lien 5</a></li>
-                    <li><a class="link" href="#">Lien 4</a></li>
-                    <li><a class="link" href="#">Lien 3</a></li>
-                    <li><a class="link" href="#">Lien 2</a></li>
-                    <li><a class="link" href="#">Lien 1</a></li>
-                </ul>
-            </div>
-
-            <!-- Bannière publicitaire du bas -->
-            <div class="side-banner">
-                <img src="votre-banniere-bas.jpg" alt="Bannière publicitaire du bas">
-            </div>
-
+            <!-- Liste de liens avec publicités intégrées -->
+            <ul class="links-list">
+                <li><a class="link" href="#">Lien 10</a></li>
+                <li class="inline-ad"><img src="votre-pub-inline1.jpg" alt="Publicité intégrée 1"></li>
+                <li><a class="link" href="#">Lien 9</a></li>
+                <li><a class="link" href="#">Lien 8</a></li>
+                <li class="inline-ad"><img src="votre-pub-inline2.jpg" alt="Publicité intégrée 2"></li>
+                <li><a class="link" href="#">Lien 7</a></li>
+                <li><a class="link" href="#">Lien 6</a></li>
+                <li class="inline-ad"><img src="votre-pub-inline3.jpg" alt="Publicité intégrée 3"></li>
+                <li><a class="link" href="#">Lien 5</a></li>
+                <li><a class="link" href="#">Lien 4</a></li>
+                <li class="inline-ad"><img src="votre-pub-inline4.jpg" alt="Publicité intégrée 4"></li>
+                <li><a class="link" href="#">Lien 3</a></li>
+                <li><a class="link" href="#">Lien 2</a></li>
+                <li class="inline-ad"><img src="votre-pub-inline5.jpg" alt="Publicité intégrée 5"></li>
+                <li><a class="link" href="#">Lien 1</a></li>
+            </ul>
         </div>
+
+        <!-- Bannière latérale droite -->
+        <div class="side-banner">
+            <img src="votre-banniere-droite.jpg" alt="Bannière droite">
+        </div>
+    </div>
+
+    <!-- Bannière du bas -->
+    <div class="bottom-banner">
+        <img src="votre-banniere-bas.jpg" alt="Bannière du bas">
     </div>
 </body>
 </html>
