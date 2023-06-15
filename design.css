@@ -1,0 +1,63 @@
+/* Style CSS pour la page */
+body {
+    background-color: #F9F9F9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Style CSS pour la bannière publicitaire du haut */
+.top-banner {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Container pour le contenu principal et les publicités latérales */
+.content-container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px;
+    width: 100%;
+}
+
+/* Style CSS pour les publicités latérales */
+.side-banner {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    flex: 1;
+}
+
+/* Liste de liens */
+.link-list {
+    flex: 3;
+    text-align: center;
+    margin: 0 20px;
+}
+
+/* Style CSS pour les liens */
+.link {
+    display: block;
+    margin: 10px auto;
+    padding: 15px 20px;
+    border-radius: 10px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+/* Enlever les points des éléments de liste */
+ul {
+    list-style: none;
+    padding: 0;
+}
