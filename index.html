@@ -6,7 +6,7 @@
     <style>
         /* Style CSS pour la page */
         body {
-            background-color: #F9F9F9; /* Couleur de fond mise à jour */
+            background-color: #F9F9F9;
             margin: 0;
             padding: 0;
             display: flex;
@@ -23,6 +23,8 @@
             position: sticky;
             top: 0;
             z-index: 100;
+            display: flex;
+            justify-content: center;
         }
 
         /* Container pour le contenu principal et les publicités latérales */
@@ -33,39 +35,34 @@
             width: 100%;
         }
 
-        /* Style CSS pour les publicités latérales */
-        .side-banner {
-            background-color: #f2f2f2;
-            padding: 20px;
-            text-align: center;
-            flex: 1;
-        }
-
-        /* Liste de liens */
-        .link-list {
-            flex: 3;
-            text-align: center;
-            margin: 0 20px;
-        }
-
         /* Style CSS pour les liens */
         .link {
             display: block;
-            margin: 10px auto;
-            padding: 15px 20px;
+            margin-bottom: 10px;
+            padding: 10px;
             border-radius: 10px;
-            background-color: #007bff;
+            background-color: lightblue;
             color: white;
             text-decoration: none;
-            font-weight: bold;
-            text-align: center;
-            box-sizing: border-box;
         }
-        
-        /* Enlever les points des éléments de liste */
-        ul {
+
+        /* Style pour la liste de liens, pour enlever les puces */
+        .links-list {
             list-style: none;
-            padding: 0;
+            padding-left: 0;
+        }
+
+        /* Style CSS pour les bannières publicitaires latérales */
+        .side-banner {
+            background-color: #f2f2f2;
+            flex: 1;
+            text-align: center;
+        }
+
+        /* Style CSS pour le contenu principal */
+        .main-content {
+            flex: 3;
+            padding: 20px;
         }
 
     </style>
@@ -82,9 +79,10 @@
             <img src="votre-banniere-gauche.jpg" alt="Bannière publicitaire de gauche">
         </div>
 
-        <div class="link-list">
+        <div class="main-content">
             <h1>Liste de liens</h1>
-            <ul>
+
+            <ul class="links-list">
                 <li><a class="link" href="#">Lien 1</a></li>
                 <li><a class="link" href="#">Lien 2</a></li>
                 <li><a class="link" href="#">Lien 3</a></li>
