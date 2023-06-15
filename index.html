@@ -31,30 +31,26 @@
 
         /* Contrôler la taille et le centrage de l'image de la bannière */
         .top-banner img {
-            max-width: 90%; /* Laisser un peu d'espace sur les côtés */
-            height: auto; /* Conserve les proportions de l'image */
+            width: 100%;
+            height: auto;
             margin: 0 auto; /* Centrer horizontalement */
         }
 
         /* Contenu principal et publicités latérales */
         .content-container {
             display: flex;
-            max-width: 1200px;
-            margin: 20px auto;
+            flex-direction: column;
             width: 100%;
         }
 
         /* Bannières latérales */
-        .side-banner {
-            background-color: #f2f2f2;
-            flex: 1;
-            text-align: center;
-            padding: 20px;
+        .side-banner img {
+            width: 100%;
+            height: auto;
         }
 
         /* Contenu principal */
         .main-content {
-            flex: 3;
             padding: 20px;
         }
 
@@ -81,23 +77,6 @@
         .link:hover {
             background-color: #45a049;
         }
-
-        /* Media queries pour les écrans de taille moyenne et petite */
-        @media screen and (max-width: 992px) {
-            .content-container {
-                flex-direction: column;
-            }
-
-            .side-banner {
-                margin-bottom: 20px;
-            }
-        }
-
-        @media screen and (max-width: 576px) {
-            .top-banner img {
-                max-width: 100%;
-            }
-        }
     </style>
 </head>
 <body>
@@ -111,11 +90,6 @@
         <!-- Contenu principal et publicités latérales -->
         <div class="content-container">
 
-            <!-- Bannière publicitaire de gauche -->
-            <div class="side-banner">
-                <img src="votre-banniere-gauche.jpg" alt="Bannière publicitaire de gauche">
-            </div>
-
             <!-- Section de contenu principal -->
             <div class="main-content">
                 <h1>Liste de liens</h1>
@@ -124,13 +98,20 @@
                 <ul class="links-list">
                     <li><a class="link" href="#">Lien 10</a></li>
                     <li><a class="link" href="#">Lien 9</a></li>
-                    <!-- ... le reste des liens ... -->
+                    <li><a class="link" href="#">Lien 8</a></li>
+                    <li><a class="link" href="#">Lien 7</a></li>
+                    <li><a class="link" href="#">Lien 6</a></li>
+                    <li><a class="link" href="#">Lien 5</a></li>
+                    <li><a class="link" href="#">Lien 4</a></li>
+                    <li><a class="link" href="#">Lien 3</a></li>
+                    <li><a class="link" href="#">Lien 2</a></li>
+                    <li><a class="link" href="#">Lien 1</a></li>
                 </ul>
             </div>
 
-            <!-- Bannière publicitaire de droite -->
+            <!-- Bannière publicitaire de bas -->
             <div class="side-banner">
-                <img src="votre-banniere-droite.jpg" alt="Bannière publicitaire de droite">
+                <img src="votre-banniere-bas.jpg" alt="Bannière publicitaire du bas">
             </div>
 
         </div>
