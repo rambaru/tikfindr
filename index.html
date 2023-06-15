@@ -1,33 +1,42 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>Ma page avec une liste de liens et des bannières publicitaires</title>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TrouveTik - Les liens et vidéos TikTok introuvables</title>
     <style>
-        /* Style CSS pour la page */
-        body {
-            background-color: #F9F9F9;
+        /* Styles généraux de la page */
+        body, html {
             margin: 0;
             padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Couleur de fond de la page */
+        body {
+            background-color: #f9f9f9;
+        }
+
+        /* Conteneur principal */
+        .main-container {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        /* Style CSS pour la bannière publicitaire du haut */
+        /* Bannière du haut */
         .top-banner {
+            display: flex;
+            justify-content: center;
             background-color: #f2f2f2;
             padding: 20px;
-            text-align: center;
             width: 100%;
             position: sticky;
             top: 0;
             z-index: 100;
-            display: flex;
-            justify-content: center;
         }
 
-        /* Container pour le contenu principal et les publicités latérales */
+        /* Conteneur de contenu avec publicités latérales */
         .content-container {
             display: flex;
             max-width: 1200px;
@@ -35,71 +44,85 @@
             width: 100%;
         }
 
-        /* Style CSS pour les liens */
-        .link {
-            display: block;
-            margin-bottom: 10px;
-            padding: 10px;
-            border-radius: 10px;
-            background-color: lightblue;
-            color: white;
-            text-decoration: none;
-        }
-
-        /* Style pour la liste de liens, pour enlever les puces */
-        .links-list {
-            list-style: none;
-            padding-left: 0;
-        }
-
-        /* Style CSS pour les bannières publicitaires latérales */
+        /* Bannières latérales */
         .side-banner {
             background-color: #f2f2f2;
             flex: 1;
             text-align: center;
+            padding: 20px;
         }
 
-        /* Style CSS pour le contenu principal */
+        /* Contenu principal */
         .main-content {
             flex: 3;
             padding: 20px;
         }
 
+        /* Liste de liens */
+        .links-list {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        /* Styles pour les liens */
+        .link {
+            display: block;
+            margin-bottom: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            background-color: #4caf50;
+            color: white;
+            text-decoration: none;
+            text-align: center;
+            transition: background-color 0.3s;
+        }
+
+        /* Effet au survol des liens */
+        .link:hover {
+            background-color: #45a049;
+        }
     </style>
 </head>
 <body>
-    <div class="top-banner">
+    <div class="main-container">
+
         <!-- Bannière publicitaire du haut -->
-        <img src="votre-banniere-haut.jpg" alt="Bannière publicitaire du haut">
-    </div>
+        <div class="top-banner">
+            <img src="votre-banniere-haut.jpg" alt="Bannière publicitaire du haut">
+        </div>
 
-    <div class="content-container">
-        <div class="side-banner">
+        <!-- Contenu principal et publicités latérales -->
+        <div class="content-container">
+
             <!-- Bannière publicitaire de gauche -->
-            <img src="votre-banniere-gauche.jpg" alt="Bannière publicitaire de gauche">
-        </div>
+            <div class="side-banner">
+                <img src="votre-banniere-gauche.jpg" alt="Bannière publicitaire de gauche">
+            </div>
 
-        <div class="main-content">
-            <h1>Liste de liens</h1>
+            <!-- Section de contenu principal -->
+            <div class="main-content">
+                <h1>Liste de liens</h1>
 
-            <ul class="links-list">
-                <!-- Les liens sont maintenant en ordre décroissant -->
-                <li><a class="link" href="#">Lien 10</a></li>
-                <li><a class="link" href="#">Lien 9</a></li>
-                <li><a class="link" href="#">Lien 8</a></li>
-                <li><a class="link" href="#">Lien 7</a></li>
-                <li><a class="link" href="#">Lien 6</a></li>
-                <li><a class="link" href="#">Lien 5</a></li>
-                <li><a class="link" href="#">Lien 4</a></li>
-                <li><a class="link" href="#">Lien 3</a></li>
-                <li><a class="link" href="#">Lien 2</a></li>
-                <li><a class="link" href="#">Lien 1</a></li>
-            </ul>
-        </div>
+                <!-- Liste de liens en ordre décroissant -->
+                <ul class="links-list">
+                    <li><a class="link" href="#">Lien 10</a></li>
+                    <li><a class="link" href="#">Lien 9</a></li>
+                    <li><a class="link" href="#">Lien 8</a></li>
+                    <li><a class="link" href="#">Lien 7</a></li>
+                    <li><a class="link" href="#">Lien 6</a></li>
+                    <li><a class="link" href="#">Lien 5</a></li>
+                    <li><a class="link" href="#">Lien 4</a></li>
+                    <li><a class="link" href="#">Lien 3</a></li>
+                    <li><a class="link" href="#">Lien 2</a></li>
+                    <li><a class="link" href="#">Lien 1</a></li>
+                </ul>
+            </div>
 
-        <div class="side-banner">
             <!-- Bannière publicitaire de droite -->
-            <img src="votre-banniere-droite.jpg" alt="Bannière publicitaire de droite">
+            <div class="side-banner">
+                <img src="votre-banniere-droite.jpg" alt="Bannière publicitaire de droite">
+            </div>
+
         </div>
     </div>
 </body>
